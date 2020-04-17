@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass style.scss build/style.css && pug index.pug --out .\\build"
+    "build": "npm i && sass style.scss build/style.css && pug index.pug --out .\\build"
   },
   "repository": {
     "type": "git",
