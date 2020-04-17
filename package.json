@@ -1,0 +1,24 @@
+{
+  "name": "oc_p3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass style.scss build/style.css && pug index.pug --out .\\build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdelllies/OC_P3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdelllies/OC_P3/issues"
+  },
+  "homepage": "https://github.com/cdelllies/OC_P3#readme",
+  "dependencies": {
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.26.3"
+  }
+}
