@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/cdelllies/OC_P3/workflows/Node.js%20CI/badge.svg)
+
 # OC_P3
 
 Projet 3 du Parcours Développeur d'Applications - Frontend chez OpenClassrooms : Créer un site pour un festival de Cinéma en plein air.
