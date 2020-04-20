@@ -6,33 +6,60 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Les Films de Plein Air
     body
-        #header
-            h1 Les Films de Plein Air
-        #prog.flat-card
-            h2 Programme
-            .container
-                .card-small
-                    h3 5 Août
-                .card-small
-                    h3 6 Août
-                .card-small
-                    h3 7 Août
-                .card-small
-                    h3 8 Août
-        #news.flat-card
-            h2 Actualités
-            #newsContainer
-                .article
-                .article
-                .article
-                .article
-                .article
-                .article
-                .article
-                .article
-                .article
-                .article
-                .spacer(style="min-width:0.5rem")
+        #nav
+            #desktop
+            #mobile
+        #page
+            #header
+                h1 Les Films de Plein Air
+            #prog.flat-card
+                h2 Programme
+                .container
+                    .card-small
+                        h3 5 Août
+                    .card-small
+                        h3 6 Août
+                    .card-small
+                        h3 7 Août
+                    .card-small
+                        h3 8 Août
+            #news.flat-card
+                h2 Actualités
+                #newsContainer
+                    .article
+                    .article
+                    .article
+                    .article
+                    .article
+                    .article
+                    .article
+                    .article
+                    .article
+                    .article
+                    .spacer(style="min-width:0.5rem")
+            #location.flat-card
+                #map
+                #contact
+                    h2 Contact
+                    input(type="text", name="name", placeholder="Entrez votre Nom")
+                    br
+                    input(type="email", name="mail", placeholder="Entrez votre e-mail")
+                    br
+                    input(type="text", name="object", placeholder="Entrez l'objet")
+                    br
+                    textarea(name="message", cols="30", rows="8", placeholder="Entrez votre message")
+                    br
+                    input(type="button", value="Envoyer")
+            #footer
+    <script>
+    |    function initMap() {
+    |    var festival = {lat: 48.879754, lng: 2.309150};
+    |    var map = new google.maps.Map(document.getElementById('map'), {zoom: 15, center: festival});
+    |    var marker = new google.maps.Marker({position: festival, map: map});
+    |    }
+    </script>
+    script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7mwraUKJY0KEnl-mDUBQlhmrJLcA8jII&callback=initMap")
+    
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", crossorigin="anonymous")
     script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js", crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", crossorigin="anonymous")
