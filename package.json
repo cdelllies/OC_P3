@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm i && sass style.sass build/style.css && pug index.pug --out .\\build",
+    "build": "npm i && sass style.sass build/style.css && pug index.pug --out ./build",
     "watch:sass": "sass --watch style.sass build/style.css",
     "watch:pug": "pug --watch index.pug --out .\\build"
   },
