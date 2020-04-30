@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Les Films de Plein Air
+    body
+        #nav
+            #desktop
+                a(href="#header")
+                    img(src="img/2.png", alt="")
+                a(href="#prog")
+                    img(src="img/1.png", alt="")
+                a(href="#news")
+                    img(src="img/4.png", alt="")
+                a(href="#location")
+                    img(src="img/3.png", alt="")
+            #mobile
+                h1 Les Films de Plein Air
+                a(href="javascript:void(0)", onclick="openNav()") &#9776;
+        #page
+            #header
+                h1 Les Films de Plein Air
+                p 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue mi eu risus sollicitudin tristique. Ut vitae justo placerat, tristique nisl et, venenatis lorem. Curabitur neque elit, pharetra in posuere sodales, cursus in dui. Cras blandit venenatis tortor at vestibulum. Integer ultrices, purus nec vehicula rhoncus, felis felis malesuada metus, et varius nisl dolor eget dui. Morbi ac tempus massa. Aliquam erat volutpat. Phasellus aliquam tincidunt neque eget mollis. Aliquam erat volutpat.
+            #prog.flat-card
+                h2 Programme
+                .container
+                    .card-small
+                        h3 5 Août
+                        h4 18h
+                        p Laurem ipsum
+                        h4 20h
+                        p Laurem ipsum
+                        h4 22h
+                        p Laurem ipsum
+                    .card-small
+                        h3 6 Août
+                        h4 18h
+                        p Laurem ipsum
+                        h4 20h
+                        p Laurem ipsum
+                        h4 22h
+                        p Laurem ipsum
+                    .card-small
+                        h3 7 Août
+                        h4 18h
+                        p Laurem ipsum
+                        h4 20h
+                        p Laurem ipsum
+                        h4 22h
+                        p Laurem ipsum
+                    .card-small
+                        h3 8 Août
+                        h4 18h
+                        p Laurem ipsum
+                        h4 20h
+                        p Laurem ipsum
+                        h4 22h
+                        p Laurem ipsum
+                button.button#progBtn(onclick="showOverlay()") Réserver
+            #news.flat-card
+                h2 Actualités
+                #newsContainer
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .article
+                        h3 Lorem
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .spacer(style="min-width:0.5rem")
+            #location.flat-card
+                #map
+                #contact
+                    h2 Contact
+                    input(type="text", name="name", placeholder="Entrez votre Nom")
+                    br
+                    input(type="email", name="mail", placeholder="Entrez votre e-mail")
+                    br
+                    input(type="text", name="object", placeholder="Entrez l'objet")
+                    br
+                    textarea(name="message", cols="30", rows="8", placeholder="Entrez votre message")
+                    br
+                    input.button(type="button", value="Envoyer")
+            #footer
+                div
+                    a(href="#")
+                        h4 Politique de confidentialité
+                    h4 © 2020 - HexaSource
+    #overlay
+        .flat-card
+            a(href="javascript:void(0)", onclick="showOverlay()").closebtn &times;
+            h2 Réserver
+            .container.radio-group
+                .card-small.radio
+                    h3 5 Août
+                    h4 18h
+                    p Laurem ipsum
+                    h4 20h
+                    p Laurem ipsum
+                    h4 22h
+                    p Laurem ipsum
+                .card-small.radio
+                    h3 6 Août
+                    h4 18h
+                    p Laurem ipsum
+                    h4 20h
+                    p Laurem ipsum
+                    h4 22h
+                    p Laurem ipsum
+                .card-small.radio
+                    h3 7 Août
+                    h4 18h
+                    p Laurem ipsum
+                    h4 20h
+                    p Laurem ipsum
+                    h4 22h
+                    p Laurem ipsum
+                .card-small.radio
+                    h3 8 Août
+                    h4 18h
+                    p Laurem ipsum
+                    h4 20h
+                    p Laurem ipsum
+                    h4 22h
+                    p Laurem ipsum
+
+            input(type="email", name="mail", placeholder="Entrez votre e-mail")
+            br
+            button.button#progBtn(onclick="showOverlay()") Réserver
+
+    .mobNav
+        a(href="javascript:void(0)", onclick="closeNav()").closebtn &times;
+        .mobNav-content
+            a(href="#header") Retourner au début
+            a(href="#prog") Programme
+            a(href="#news") Actualités
+            a(href="#location") Coordonnées
+
+    <script>
+    |    function initMap() {
+    |    var festival = {lat: 48.879754, lng: 2.309150};
+    |    var map = new google.maps.Map(document.getElementById('map'), {zoom: 15, center: festival});
+    |    var marker = new google.maps.Marker({position: festival, map: map});
+    |    }
+    </script>
+    script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7mwraUKJY0KEnl-mDUBQlhmrJLcA8jII&callback=initMap")
+    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js", crossorigin="anonymous")
+    script(src="script.js")

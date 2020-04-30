@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap')
+
+$secondaryBlue: #0D98FF
+$secondaryBlueLight: #3eacff
+$secondaryBlueDark: #126eb3
+$primary: #FFCC00
+$primaryLight: #ffdb4a
+$secondaryPurple: #6112B3
+
+html
+    scroll-behavior: smooth
+    h1
+        margin: 0
+        font-size: 2rem
+    @media screen and ( max-width: 320px )
+        font-size: 12px
+    @media screen and ( max-width: 500px ) and ( min-width: 320px )
+        font-size: 14px
+    @media screen and ( min-width: 500px )
+        font-size: 16px
+        background-color: $secondaryPurple
+        padding: 1rem
+        #header
+            border-radius: 0 1rem 0 0
+            
+body
+    display: flex
+    margin: 0
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
+    border-radius: 1rem
+    background-color: $secondaryBlue
+    font-family: 'Oxygen', sans-serif !important
+    
+#nav
+    @media screen and ( min-width: 500px )
+        #desktop
+            position: fixed
+            height: calc( 100vh - 2rem )
+            width: 4rem
+            background-color: $secondaryBlue
+            border-radius: 1rem 0 0 1rem
+            display: flex
+            flex-flow: column
+            justify-content: center
+            img
+                display: block
+                margin: 0.75rem auto 0.75rem
+        #mobile
+            visibility: hidden
+            width: 0
+    @media screen and ( max-width: 500px )
+        #desktop
+            width: 0
+        #mobile
+            position: fixed
+            height: 3.5rem
+            width: 100%
+            top: 0%
+            background-color: $secondaryBlue
+            display: flex
+            justify-content: space-between
+            z-index: 4
+            h1, a
+                padding: 0.5rem
+                color: white
+            a
+                font-size: 2rem
+                text-decoration: none
+                margin-top: -0.20rem
+                
+#page
+    border-radius: 1rem
+    background-color: #fff !important
+    margin: 0
+
+    &::-webkit-scrollbar 
+        width: 0.5rem
+
+    &::-webkit-scrollbar-track 
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+    &::-webkit-scrollbar-thumb 
+        background-color: darkgrey
+        outline: 1px solid slategrey
+
+    #header
+        color: white
+        background-color: $primary
+        margin: 0
+        text-align: center
+        padding: 1rem 2rem 3rem 2rem
+
+    #prog
+        box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.25)
+        margin-top: -2rem
+        border-radius: 1rem
+
+    #news
+        box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.75)
+        border-radius: 1rem 1rem 0 0 
+        background-color: $secondaryBlueLight
+        padding-bottom: 2rem
+        h2
+            color: white
+            margin-top: 0.5rem 
+
+    #newsContainer
+        background-color: #fff
+        border-radius: 0.5rem
+        padding: 0.5rem
+        display: flex
+        flex-direction: row
+        overflow-x: auto 
+        height: 30rem
+        box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
+
+        &::-webkit-scrollbar 
+            width: 0.5rem
+
+        &::-webkit-scrollbar-track 
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+            border-radius: 0 0 0.5rem 0.5rem
+
+        &::-webkit-scrollbar-thumb 
+            background-color: $primary
+            border-radius: 0 0 0.5rem 0.5rem
+        
+    #location
+        border-radius: 1rem 1rem 0 0 
+        box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.75)
+        margin-top: -1rem
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem
+        display: flex
+        flex-wrap: wrap
+        #map, #contact
+            margin-bottom: 0.5rem
+            height: 30rem
+            box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
+            @media screen and ( min-width: 500px )    
+                width: 50%
+            @media screen and ( max-width: 500px )    
+                width: 100%
+                border-radius: 0.5rem
+                
+        @media screen and ( min-width: 500px ) 
+            #map
+                border-radius: 0.5rem 0 0 0.5rem
+            #contact
+                border-radius: 0 0.5rem 0.5rem 0
+                
+    #footer
+        box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.50)
+        padding: 1rem 2rem
+        background-color: $primary
+        h4, a
+            color: white
+            text-decoration: none
+            margin: 0.25rem
+        div
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+        @media screen and ( min-width: 500px )
+            border-radius: 1rem 1rem 1rem 0
+        @media screen and ( max-width: 500px )
+            border-radius: 1rem 1rem 0 0
+
+    .article
+        height: 22.75rem
+        min-width: 15rem
+        border-radius: 0.5rem
+        background-color: white
+        margin: 1rem
+        padding: 2rem
+        box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
+    @media screen and ( max-width: 500px )
+        width: 100%
+    @media screen and ( min-width: 500px )
+        margin-left: 4rem
+        width: calc( 100% - 4rem )
+
+#contact, .flat-card
+    input, textarea
+        box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
+        border-radius: 0.5rem
+        border: 0
+        margin: 0.5rem
+        padding: 0.5rem
+        width: 80%
+
+.container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    
+.flat-card
+    text-align: center
+    background-color: #fff
+    padding: 0.5rem
+
+.card-small
+    border-radius: 0.5rem
+    width: 15rem
+    min-width: 10rem
+    height: 20rem
+    background-color: #fff
+    padding: 1rem
+    box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
+    margin: 1rem
+    border-color: white
+
+.button
+    background-color: $secondaryBlue
+    border: none
+    color: white
+    margin: 0.5rem 0 1rem 0rem
+    border-radius: 0.25rem
+    font-size: 16px
+    padding: 0.5rem 3rem
+    box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
+    &:hover
+        background-color: $primary
+        
+    &:active
+        background-color: $secondaryBlueDark
+
+#overlay
+    visibility: hidden
+    top: 0px
+    height: 100%
+    width: 100%
+    position: fixed
+    z-index: 4
+    background-color: #00000080
+
+    .flat-card
+        max-height: calc( 100% - 3rem )
+        min-height: fit-content
+        width: calc( 100% - 3rem )
+        border-radius: 0.5rem
+        overflow: auto
+        margin: 1rem
+        &::-webkit-scrollbar
+            width: 0.5rem
+        &::-webkit-scrollbar-track 
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+            border-radius: 0 0.5rem 0.5rem 0
+        &::-webkit-scrollbar-thumb 
+            background-color: $secondaryBlueLight
+            border-radius: 0 0.5rem 0.5rem 0
+
+    @media screen and ( min-width: 500px )
+        margin-left: -1rem
+    
+.selected
+    border-color: $secondaryBlue
+    margin: calc( 1rem - 3px )
+    border-width: 3px
+    border-style: solid
+
+.visible
+    visibility: visible !important
+
+//Mobile nav menu
+
+.mobNav 
+    height: 100%
+    width: 0
+    position: fixed
+    z-index: 5
+    top: 0
+    left: 0
+    background-color: rgb(0,0,0)
+    background-color: #fffffff1
+    overflow-x: hidden
+    transition: 0.5s
+
+.mobNav-content
+    position: relative
+    top: 25%
+    width: 100%
+    text-align: center
+    margin-top: 30px
+
+.mobNav a,  .closebtn 
+    padding: 8px
+    text-decoration: none
+    font-size: 36px
+    color: #818181
+    display: block
+
+.mobNav a:hover, .mobNav a:focus 
+    color: #f1f1f1
+
+.closebtn 
+    position: absolute
+    top: 0
+    right: 1.5rem
+    font-size: 3rem
+
+@media screen and (max-height: 450px) 
+.mobNav a 
+    font-size: 20px
+.mobNav .closebtn
+    font-size: 40px
+    top: 15px
+    right: 35px
