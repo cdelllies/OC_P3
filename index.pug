@@ -153,6 +153,15 @@ html(lang="en")
             input(type="email", name="mail", placeholder="Entrez votre e-mail")
             br
             button.button#progBtn(onclick="showOverlay()") Réserver
+
+    .mobNav
+        a(href="javascript:void(0)", onclick="closeNav()").closebtn &times;
+        .mobNav-content
+            a(href="#header") Retourner au début
+            a(href="#prog") Programme
+            a(href="#news") Actualités
+            a(href="#location") Coordonnées
+
     <script>
     |    function initMap() {
     |    var festival = {lat: 48.879754, lng: 2.309150};
