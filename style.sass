@@ -117,6 +117,24 @@ body
                 border-radius: 0.5rem 0 0 0.5rem
             #contact
                 border-radius: 0 0.5rem 0.5rem 0
+                
+    #footer
+        box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.50)
+        padding: 1rem 2rem
+        background-color: $primary
+        h4, a
+            color: white
+            text-decoration: none
+            margin: 0.25rem
+        div
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+        @media screen and ( min-width: 500px )
+            border-radius: 1rem 1rem 1rem 0
+        @media screen and ( max-width: 500px )
+            border-radius: 1rem 1rem 0 0
+
     .article
         height: 22.75rem
         min-width: 15rem
