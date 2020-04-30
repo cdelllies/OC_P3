@@ -36,6 +36,35 @@ body
             width: 4rem
             background-color: $secondaryBlue
             border-radius: 1rem 0 0 1rem
+            display: flex
+            flex-flow: column
+            justify-content: center
+            img
+                display: block
+                margin: 0.75rem auto 0.75rem
+        #mobile
+            visibility: hidden
+            width: 0
+    @media screen and ( max-width: 500px )
+        #desktop
+            width: 0
+        #mobile
+            position: fixed
+            height: 3.5rem
+            width: 100%
+            top: 0%
+            background-color: $secondaryBlue
+            display: flex
+            justify-content: space-between
+            z-index: 4
+            h1, a
+                padding: 0.5rem
+                color: white
+            a
+                font-size: 2rem
+                text-decoration: none
+                margin-top: -0.20rem
+                
 #page
     border-radius: 1rem
     background-color: #fff !important
