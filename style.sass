@@ -90,6 +90,7 @@ body
         text-align: center
         padding: 1rem 2rem 3rem 2rem
 
+
     #prog
         box-shadow: 0px -10px 10px -10px rgba(0,0,0,0.25)
         margin-top: -2rem
@@ -111,7 +112,7 @@ body
         display: flex
         flex-direction: row
         overflow-x: auto 
-        height: 30rem
+        height: 23.5rem
         box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
 
         &::-webkit-scrollbar 
@@ -166,7 +167,7 @@ body
             border-radius: 1rem 1rem 0 0
 
     .article
-        height: 22.75rem
+        height: 16rem
         min-width: 15rem
         border-radius: 0.5rem
         background-color: white
@@ -198,13 +199,29 @@ body
     background-color: #fff
     padding: 0.5rem
 
-.card-small
-    border-radius: 0.5rem
+.card.large
+    max-width: calc( 100% - 6rem )
+    padding: 2rem
+    h4
+        margin: auto
+        max-width: 80%
+
+    h4, h2
+        margin-top: 0
+        margin-bottom: 0
+            
+    
+    
+.card.small
     width: 15rem
-    min-width: 10rem
-    height: 20rem
-    background-color: #fff
+    height: 21rem
     padding: 1rem
+.card
+    color: black
+    border-radius: 0.5rem
+    min-width: 10rem
+    background-color: #fff
+    
     box-shadow: 0px 0px 16px rgba(163, 177, 198, 0.418)
     margin: 1rem
     border-color: white
