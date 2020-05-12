@@ -9,19 +9,20 @@ html(lang="en")
         #nav
             #desktop
                 a(href="#header")
-                    img(src="img/2.png", alt="")
+                    img(src="img/2.png")
                 a(href="#prog")
-                    img(src="img/1.png", alt="")
+                    img(src="img/1.png")
                 a(href="#news")
-                    img(src="img/4.png", alt="")
+                    img(src="img/4.png")
                 a(href="#location")
-                    img(src="img/3.png", alt="")
+                    img(src="img/3.png")
             #mobile
                 h1 Les Films de Plein Air
                 a(href="javascript:void(0)", onclick="openNav()") &#9776;
         #page
             #header
                 h1 Les Films de Plein Air
+                h3(style="margin:0") Le festival de cinéma gratuit !
                 .card.large
                     div
                         h2 Soyez prêts pour l'édition 2020 du festival !
@@ -31,7 +32,11 @@ html(lang="en")
                         h2 L'association :
                         br
                         h4 Les films de plein air est une association à but non lucratif composée de passionnés de cinéma. Le but et la raison d'être de notre association est notre volontée de rendre la culture accessible au plus grand nombre. Venez nombreux partager notre passion !
-                    div
+                        br
+                        h2 S'inscrire à la newsletter :
+                        br
+                        input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
+                        input.button(type="button", value="S'inscrire", onclick="subscribe()")
             #prog.flat-card
                 h2 Programme
                 .container
@@ -67,7 +72,7 @@ html(lang="en")
                         p Hiroshima mon amour - Alain Renis
                         h4 22h
                         p L'inconnu du lac - Alain Guiraudie
-                button.button#progBtn(onclick="showOverlay()") Réserver
+                button.button#progBtn(onclick="showOverlay()") Se préinscrire
             #news.flat-card
                 h2 Actualités
                 #newsContainer
@@ -94,15 +99,18 @@ html(lang="en")
                 #map
                 #contact
                     h2 Contact
-                    input(type="text", name="name", placeholder="Entrez votre Nom")
+                    input.input(type="text", name="name", placeholder="Entrez votre Nom")
                     br
-                    input(type="email", name="mail", placeholder="Entrez votre e-mail")
+                    input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
                     br
-                    input(type="text", name="object", placeholder="Entrez l'objet")
+                    input.input(type="text", name="object", placeholder="Entrez l'objet")
                     br
-                    textarea(name="message", cols="30", rows="8", placeholder="Entrez votre message")
+                    textarea.input(name="message", cols="30", rows="8", placeholder="Entrez votre message")
                     br
-                    input.button(type="button", value="Envoyer")
+                    label(for="checkbox") En cochant cette case, vous acceptez les CGU
+                    input.input(type="checkbox", name="checkbox")
+                    br
+                    input.button(type="button", value="Envoyer", onclick="contact()")
             #footer
                 div
                     a(href="#")
@@ -110,8 +118,9 @@ html(lang="en")
                     h4 © 2020 - HexaSource
     #overlay
         .flat-card
-            a(href="javascript:void(0)", onclick="showOverlay()").closebtn &times;
-            h2 Réserver
+            a(href="javascript:void(0)", onclick="closeOverlay()").closebtn &times;
+            h2 Se préinscrire
+            span Sélectionnez une date en cliquant sur sa carte
             .container.radio-group
                 .card.small.radio
                         h3 5 Août
@@ -146,9 +155,10 @@ html(lang="en")
                         h4 22h
                         p L'inconnu du lac - Alain Guiraudie
 
-            input(type="email", name="mail", placeholder="Entrez votre e-mail")
+            input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
+            input.input(type="number", name="nombre", placeholder="Nombre de visiteurs")
             br
-            button.button#progBtn(onclick="showOverlay()") Réserver
+            button.button(onclick="showOverlay()") Se préinscrire
 
     .mobNav
         a(href="javascript:void(0)", onclick="closeNav()").closebtn &times;
