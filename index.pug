@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="fr")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=device-width", initial-scale="1.0")
         link(rel="stylesheet", href="style.css")
         title Les Films de Plein Air
+        script(src="https://kit.fontawesome.com/1a570bc5ca.js", crossorigin="anonymous")
     body
         #nav
             #desktop
                 a(href="#header")
-                    img(src="img/2.png")
+                    img(src="img/2.png", alt="logo accueil")
                 a(href="#prog")
-                    img(src="img/1.png")
+                    img(src="img/1.png", alt="logo programmation")
                 a(href="#news")
-                    img(src="img/4.png")
+                    img(src="img/4.png", alt="logo journal")
                 a(href="#location")
-                    img(src="img/3.png")
+                    img(src="img/3.png", alt="logo contact")
             #mobile
                 h1 Les Films de Plein Air
                 a(href="javascript:void(0)", onclick="openNav()") &#9776;
@@ -23,7 +24,7 @@ html(lang="en")
             #header
                 h1 Les Films de Plein Air
                 h3(style="margin:0") Le festival de cinéma gratuit !
-                .card.large
+                .card.large#headImg
                     div
                         h2 Soyez prêts pour l'édition 2020 du festival !
                         br
@@ -38,9 +39,10 @@ html(lang="en")
                         input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
                         input.button(type="button", value="S'inscrire", onclick="subscribe()")
             #prog.flat-card
-                h2 Programme
+                h2 Programme 
+                    i(class="far fa-calendar-alt")
                 .container
-                    .card.small
+                    .card.small#affiche1
                         h3 5 Août
                         h4 18h
                         p A bout de souffle - Jean Luc Godard
@@ -48,7 +50,7 @@ html(lang="en")
                         p Polisse - Maïwenn
                         h4 22h
                         p 35 rhums - Claire Denis
-                    .card.small
+                    .card.small#affiche2
                         h3 6 Août
                         h4 18h
                         p Une femme est une femme - Jean Luc Godard
@@ -56,25 +58,26 @@ html(lang="en")
                         p Réalité - Quentin Dupieux
                         h4 22h
                         p Journal d'une femme de chambre - Benoît Jacquot
-                    .card.small
+                    .card.small#affiche3
                         h3 7 Août
                         h4 18h
                         p Ma loute - Bruno Dumont
                         h4 20h
-                        p Règle du jeu - Jean Renoir
+                        p La règle du jeu - Jean Renoir
                         h4 22h
                         p Les nuits de la pleine lune - Eric Rohmer
-                    .card.small
+                    .card.small#affiche4
                         h3 8 Août
                         h4 18h
                         p Les parapluies de Cherbourg - Jaques Demy
                         h4 20h
-                        p Hiroshima mon amour - Alain Renis
+                        p Hiroshima mon amour - Alain Resnais
                         h4 22h
                         p L'inconnu du lac - Alain Guiraudie
                 button.button#progBtn(onclick="showOverlay()") Se préinscrire
             #news.flat-card
-                h2 Actualités
+                h2 Actualités&nbsp;
+                    i(class="far fa-newspaper")
                 #newsContainer
                     .article
                         h3 Programme 2020
@@ -98,7 +101,8 @@ html(lang="en")
             #location.flat-card
                 #map
                 #contact
-                    h2 Contact
+                    h2 Contact&nbsp;
+                        i(class="far fa-envelope")
                     input.input(type="text", name="name", placeholder="Entrez votre Nom")
                     br
                     input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
@@ -108,7 +112,7 @@ html(lang="en")
                     textarea.input(name="message", cols="30", rows="8", placeholder="Entrez votre message")
                     br
                     label(for="checkbox") En cochant cette case, vous acceptez les CGU
-                    input.input(type="checkbox", name="checkbox")
+                    input.input(type="checkbox", name="checkbox", id="checkbox")
                     br
                     input.button(type="button", value="Envoyer", onclick="contact()")
             #footer
@@ -116,65 +120,65 @@ html(lang="en")
                     a(href="#")
                         h4 Politique de confidentialité
                     h4 © 2020 - HexaSource
-    #overlay
-        .flat-card
-            a(href="javascript:void(0)", onclick="closeOverlay()").closebtn &times;
-            h2 Se préinscrire
-            span Sélectionnez une date en cliquant sur sa carte
-            .container.radio-group
-                .card.small.radio
-                        h3 5 Août
-                        h4 18h
-                        p A bout de souffle - Jean Luc Godard
-                        h4 20h
-                        p Polisse - Maïwenn
-                        h4 22h
-                        p 35 rhums - Claire Denis
-                .card.small.radio
-                        h3 6 Août
-                        h4 18h
-                        p Une femme est une femme - Jean Luc Godard
-                        h4 20h
-                        p Réalité - Quentin Dupieux
-                        h4 22h
-                        p Journal d'une femme de chambre - Benoît Jacquot
-                .card.small.radio
-                        h3 7 Août
-                        h4 18h
-                        p Ma loute - Bruno Dumont
-                        h4 20h
-                        p Règle du jeu - Jean Renoir
-                        h4 22h
-                        p Les nuits de la pleine lune - Eric Rohmer
-                .card.small.radio
-                        h3 8 Août
-                        h4 18h
-                        p Les parapluies de Cherbourg - Jaques Demy
-                        h4 20h
-                        p Hiroshima mon amour - Alain Renis
-                        h4 22h
-                        p L'inconnu du lac - Alain Guiraudie
+        #overlay
+            .flat-card
+                a(href="javascript:void(0)", onclick="closeOverlay()").closebtn &times;
+                h2 Se préinscrire
+                span Sélectionnez une date en cliquant sur sa carte
+                .container.radio-group
+                    .card.small.radio
+                            h3 5 Août
+                            h4 18h
+                            p A bout de souffle - Jean Luc Godard
+                            h4 20h
+                            p Polisse - Maïwenn
+                            h4 22h
+                            p 35 rhums - Claire Denis
+                    .card.small.radio
+                            h3 6 Août
+                            h4 18h
+                            p Une femme est une femme - Jean Luc Godard
+                            h4 20h
+                            p Réalité - Quentin Dupieux
+                            h4 22h
+                            p Journal d'une femme de chambre - Benoît Jacquot
+                    .card.small.radio
+                            h3 7 Août
+                            h4 18h
+                            p Ma loute - Bruno Dumont
+                            h4 20h
+                            p La règle du jeu - Jean Renoir
+                            h4 22h
+                            p Les nuits de la pleine lune - Eric Rohmer
+                    .card.small.radio
+                            h3 8 Août
+                            h4 18h
+                            p Les parapluies de Cherbourg - Jaques Demy
+                            h4 20h
+                            p Hiroshima mon amour - Alain Resnais
+                            h4 22h
+                            p L'inconnu du lac - Alain Guiraudie
 
-            input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
-            input.input(type="number", name="nombre", placeholder="Nombre de visiteurs")
-            br
-            button.button(onclick="showOverlay()") Se préinscrire
+                input.input(type="email", name="mail", placeholder="Entrez votre e-mail")
+                input.input(type="number", name="nombre", placeholder="Nombre de visiteurs")
+                br
+                button.button(onclick="showOverlay()") Se préinscrire
 
-    .mobNav
-        a(href="javascript:void(0)", onclick="closeNav()").closebtn &times;
-        .mobNav-content
-            a(href="#header") Retourner au début
-            a(href="#prog") Programme
-            a(href="#news") Actualités
-            a(href="#location") Coordonnées
+        .mobNav
+            a(href="javascript:void(0)", onclick="closeNav()").closebtn &times;
+            .mobNav-content
+                a(href="#header") Retourner au début
+                a(href="#prog") Programme
+                a(href="#news") Actualités
+                a(href="#location") Coordonnées
 
-    <script>
-    |    function initMap() {
-    |    var festival = {lat: 48.879754, lng: 2.309150};
-    |    var map = new google.maps.Map(document.getElementById('map'), {zoom: 15, center: festival});
-    |    var marker = new google.maps.Marker({position: festival, map: map});
-    |    }
-    </script>
-    script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7mwraUKJY0KEnl-mDUBQlhmrJLcA8jII&callback=initMap")
-    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js", crossorigin="anonymous")
-    script(src="script.js")
+        <script>
+        |    function initMap() {
+        |    var festival = {lat: 48.879754, lng: 2.309150};
+        |    var map = new google.maps.Map(document.getElementById('map'), {zoom: 15, center: festival});
+        |    var marker = new google.maps.Marker({position: festival, map: map});
+        |    }
+        </script>
+        script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7mwraUKJY0KEnl-mDUBQlhmrJLcA8jII&callback=initMap")
+        script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js", crossorigin="anonymous")
+        script(src="script.js")

@@ -218,6 +218,12 @@ input[type="checkbox"]
     width: 15rem
     height: 21rem
     padding: 1rem
+    background-size: cover
+    transition: background-image .3s ease
+    p, h3, h4
+        background-color: #ffffffce
+        border-radius: 0.25rem
+
 .card
     color: black
     border-radius: 0.5rem
@@ -271,6 +277,17 @@ input[type="checkbox"]
     @media screen and ( min-width: 500px )
         margin-left: -1rem
     
+
+#headImg
+    background-image: url("img/headBg.jpg")
+    h2, h4
+        background-color: #ffffffce
+        border-radius: 0.25rem
+    h2
+        margin: auto
+        width: fit-content
+        padding: 0.25rem 1rem 0.25rem 1rem
+
 .selected
     border-color: $secondaryBlue
     margin: calc( 1rem - 3px )

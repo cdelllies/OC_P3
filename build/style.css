@@ -260,6 +260,12 @@ input[type=checkbox] {
   width: 15rem;
   height: 21rem;
   padding: 1rem;
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+.card.small p, .card.small h3, .card.small h4 {
+  background-color: #ffffffce;
+  border-radius: 0.25rem;
 }
 
 .card {
@@ -321,6 +327,19 @@ input[type=checkbox] {
   #overlay {
     margin-left: -1rem;
   }
+}
+
+#headImg {
+  background-image: url("img/headBg.jpg");
+}
+#headImg h2, #headImg h4 {
+  background-color: #ffffffce;
+  border-radius: 0.25rem;
+}
+#headImg h2 {
+  margin: auto;
+  width: fit-content;
+  padding: 0.25rem 1rem 0.25rem 1rem;
 }
 
 .selected {

@@ -37,3 +37,21 @@ function subscribe() {
         alert('Votre inscription a été prise en compte !')
     }, 500)
 }
+
+let i = 0;
+
+let toggleBg = () => {
+    if (i<3) {
+        i++
+    } else {
+        i=1
+    }
+    document.getElementById('affiche1').style.backgroundImage = `url(img/a${i}.jpg)`
+    document.getElementById('affiche2').style.backgroundImage = `url(img/a${i+3}.jpg)`
+    document.getElementById('affiche3').style.backgroundImage = `url(img/a${i+6}.jpg)`
+    document.getElementById('affiche4').style.backgroundImage = `url(img/a${i+9}.jpg)`
+}
+
+toggleBg()
+
+setInterval(toggleBg,3000)
