@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/cdelllies/OC_P3#readme",
   "dependencies": {
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.26.3"
   }
